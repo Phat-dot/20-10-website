@@ -1,0 +1,86 @@
+/* Reset default margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ff6f61;
+}
+
+p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.btn {
+    padding: 15px 40px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff8a73;
+}
+
+.confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    opacity: 0.8;
+    animation: fall 2s infinite ease-in;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+.hidden {
+    display: none;
+}
